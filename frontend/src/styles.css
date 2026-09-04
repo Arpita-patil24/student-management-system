@@ -1,0 +1,147 @@
+:root {
+  --bg: #f5f7fb;
+  --panel: #ffffff;
+  --primary: #0f766e;
+  --primary-dark: #115e59;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #dfe7f5;
+  --danger: #b91c1c;
+  --danger-soft: #fee2e2;
+  --secondary: #e0f2fe;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button, input, select {
+  font: inherit;
+}
+
+.topbar {
+  background: #0f172a;
+  color: white;
+  padding: 18px 28px;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.04);
+}
+
+h2 { margin-top: 0; }
+
+.student-form, .filter-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: white;
+}
+
+button {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button[type='submit'] {
+  background: var(--primary);
+  color: white;
+  width: fit-content;
+}
+
+button.secondary {
+  background: var(--secondary);
+  color: #0f172a;
+}
+
+button.danger {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.filter-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.student-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 18px;
+}
+
+.student-card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fafcff;
+  padding: 18px;
+}
+
+.student-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.student-card h3 {
+  margin: 0;
+}
+
+.student-card p {
+  margin: 8px 0;
+  color: var(--muted);
+}
+
+.status-pill {
+  background: #dcfce7;
+  color: #166534;
+  font-size: 0.72rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+}
